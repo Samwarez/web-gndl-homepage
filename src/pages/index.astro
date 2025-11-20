@@ -3,48 +3,77 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+const title = "Great Northern Digital Labs";
 ---
 
 <!doctype html>
 <html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>{title}</title>
+    <meta
+      name="description"
+      content="Great Northern Digital Labs – making technology quietly useful in everyday life."
+    />
+  </head>
+
+  <body
+    style="
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #050816;
+      color: #e5e7eb;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    "
+  >
+    <main
+      style="
+        max-width: 720px;
+        width: 100%;
+        text-align: left;
+      "
+    >
+      <header style="margin-bottom: 2rem;">
+        <img
+          src="/GNDLIslandLogo.png"
+          alt="Great Northern Digital Labs"
+          style="max-width: 380px; width: 60%; height: auto; display: block; margin-bottom: 1rem;"
+        />
+        <p style="margin: 0; font-size: 0.95rem; opacity: 0.7;">
+          Making technology quietly useful in everyday life.
+        </p>
+      </header>
+
+      <section style="font-size: 1rem; line-height: 1.7;">
+        <p>
+          Great Northern Digital Labs is a small northern skunkworks focused on
+          making technology work in real people’s everyday lives. We tinker,
+          prototype, and experiment until strange ideas become practical tools
+          you can actually use.
+        </p>
+
+        <p>
+          Around here, we’re not afraid of odd projects or rough edges. We
+          specialize in <strong>attempting the idiotic, using the impractical,
+          to do the impossible</strong> — and then quietly packaging the results
+          into reliable systems and services.
+        </p>
+
+        <p style="margin-top: 1.5rem;">
+          This is a temporary home while new experiments spin up.
+          For inquiries, collaborations, or delightfully weird ideas, email
+          <a
+            href="mailto:info@gndl.ca"
+            style="color: #28e0ff; text-decoration: none;"
+          >
+            info@gndl.ca
+          </a>.
+        </p>
+      </section>
+    </main>
+  </body>
 </html>
